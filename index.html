@@ -13,6 +13,80 @@
   <link href="style.css" rel="stylesheet" />
   <title>Muhammad Azeem's - Portfolio - Home</title>
 </head>
+<style>
+  .glow-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glow-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: 0;
+    opacity: 0;
+    animation: colorPulse 18s ease-in-out infinite;
+  }
+
+  .glow-wrapper img {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  @keyframes colorPulse {
+
+    0%,
+    10% {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    12%,
+    22% {
+      background-color: rgba(0, 240, 255, 0.4);
+      /* Light Cyan */
+      opacity: 1;
+    }
+
+    24%,
+    34% {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    36%,
+    46% {
+      background-color: rgba(255, 0, 240, 0.4);
+      /* Light Pink */
+      opacity: 1;
+    }
+
+    48%,
+    58% {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    60%,
+    70% {
+      background-color: rgba(124, 58, 237, 0.4);
+      /* Light Purple */
+      opacity: 1;
+    }
+
+    72%,
+    100% {
+      background-color: transparent;
+      opacity: 0;
+    }
+  }
+</style>
 
 <body>
   <!-- Navigation Is Here -->
@@ -23,83 +97,140 @@
       </span>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="/index.html" class="nav-link fw-bold">Home</a>
+          <a href="/index.html" class="nav-link fw-bold text-white">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/about.html" class="nav-link fw-bold">About</a>
+          <a href="/about.html" class="nav-link fw-bold text-white">About</a>
         </li>
         <li class="nav-item">
-          <a href="/contact.html" class="nav-link fw-bold">Contact</a>
+          <a href="/contact.html" class="nav-link fw-bold text-white">Contact</a>
         </li>
       </ul>
       <div class="hamburger z-5">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="4" width="24" height="2" rx="1" fill="white" />
+          <rect y="11" width="24" height="2" rx="1" fill="white" />
+          <rect y="18" width="24" height="2" rx="1" fill="white" />
+        </svg>
       </div>
     </nav>
   </header>
 
-  <main class="main container">
-    <!-- Type Writer Effect Is Here -->
+  <main class="main">
+     <!-- Type Writer Effect Is Here -->
     <div class="container text-center mt-4 d-flex justify-content-center">
       <span class="before-typewriter">I am</span>
       <span id="typewriter" class="typewriter"></span>
     </div>
 
-    <!-- Main Content Is Here -->
-  <div class="container content-section">
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <img src="/fav1.jpg" alt="Profile Image" height="200" class="profile-image">
+    <div class="row align-items-center mt-5 mx-2">
+      <div class="col-md-4 text-center glow-wrapper my-2">
+        <img src="azeem-Photoroom.png" alt="Muhammad Azeem" width="280" />
       </div>
       <div class="col-md-8">
-        <h1>Hi,</h1>
-        <p class="fs-4">I'm a fullstack web developer proficient in Microsoft Office.</p>
-        <p class="fs-4">I worked on various projects and love to create interactive and dynamic web applications.</p>
-        <div class="links mt-4">
-          <h2>My Projects</h2>
-          <ul>
-            <li class="fs-5">SS Academy<a href="https://ssacademy.vercel.app" target="_blank"><button class="btn btn-dark mx-3 my-2 fw-bold btn-lg">Visit</button></a></li>
-            <li class="fs-5"><span class="text-warning mx-2">Open excluding chrome: </span>Static Shop<a href="https://azeem565.000webhostapp.com" target="_blank"><button class="btn btn-dark mx-3 my-2 fw-bold btn-lg">Visit</button></a></li>
+        <h1 class="display-5 fw-bold">Hi, I'm Muhammad Azeem</h1>
+        <p class="fs-5">A passionate Fullstack Developer skilled in modern web technologies & Microsoft Office tools.
+        </p>
+        <p class="fs-5">I create user-friendly, performant, and visually appealing web experiences.</p>
+        <div class="mt-4">
+          <h3 class="mb-3 text-center">✨ Projects</h3>
+          <ul class="list-unstyled text-center">
+            <li class="mb-2">SS Academy
+              <a href="https://ssacademy.vercel.app" target="_blank"
+                class="btn btn-outline-primary btn-sm ms-2">Visit</a>
+            </li>
+            <li>Static Shop
+              <a href="https://azeem565.000webhostapp.com" target="_blank"
+                class="btn btn-outline-primary btn-sm ms-2">Visit</a>
+            </li>
+            <li>AllInOne e-commerce
+              <a href="https://allinone-gold.vercel.app" target="_blank"
+                class="btn btn-outline-primary btn-sm ms-2">Visit</a>
+            </li>
           </ul>
         </div>
       </div>
+      <section class="container my-5 mx-2 text-center">
+        <h2 class="mb-4">📁 GitHub Account </h2>
+        <a href="https://github.com/0-Chaudhary-0" target="_blank" class="text-xl text-primary ms-2">Visit</a>
     </div>
-  </div>
+    <!-- Repeat for more repos -->
+    <section class="container my-1 text-center">
+      <h2 class="mb-4">🛠 Skills</h2>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="badge bg-secondary px-2 text-2xl">HTML</span>
+        <span class="badge bg-secondary px-2 text-2xl">CSS</span>
+        <span class="badge bg-secondary px-2 text-2xl">JavaScript</span>
+        <span class="badge bg-secondary px-2 text-2xl">Node.js</span>
+        <span class="badge bg-secondary px-2 text-2xl">Express.js</span>
+        <span class="badge bg-secondary px-2 text-2xl">React</span>
+        <span class="badge bg-secondary px-2 text-2xl">Bootstrap</span>
+        <span class="badge bg-secondary px-2 text-2xl">Tailwind</span>
+        <span class="badge bg-secondary px-2 text-2xl">Next.js</span>
+        <span class="badge bg-secondary px-2 text-2xl">Microsoft Office</span>
+      </div>
+    </section>
 
-  <div class="my-4 yt-sec">
-    <div class="yt-heading">
-      <h1>My Youtube Gaming Content</h1>
     </div>
-    <div class="yt-content my-4 text-center d-flex justify-content-around gap-10 flex-wrap">
-      <iframe class="rounded-4 my-2" width="350" height="150" src="https://www.youtube.com/embed/9z_us9mHx8E?si=iAr4KoJajeedgkTW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe class="rounded-4 my-2" width="350" height="150" src="https://www.youtube.com/embed/tHmbSSKiK8M?si=2jRLFfli_zGx2oGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe class="rounded-4 my-2" width="350" height="150" src="https://www.youtube.com/embed/4nh3tJSfnSg?si=ZRvGv5HBvaO4TXpn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe class="rounded-4 my-2" width="350" height="150" src="https://www.youtube.com/embed/4G2fcZJR9oI?si=s0Lm7r75hfwFZVOx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <div class="text-center my-4">
+      <a href="/Azeem_Shahid_Resume.docx" download class="btn btn-primary mt-3">Download Resume</a>
     </div>
-  </div>
+
+    </div>
+
+
+    <div class="my-4 yt-sec my-8">
+      <div class="yt-heading">
+        <h1>My Youtube Gaming Content</h1>
+      </div>
+      <div class="yt-content my-4 text-center d-flex justify-content-around gap-10 flex-wrap">
+        <iframe class="rounded-4 my-2" width="350" height="150"
+          src="https://www.youtube.com/embed/9z_us9mHx8E?si=iAr4KoJajeedgkTW" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="rounded-4 my-2" width="350" height="150"
+          src="https://www.youtube.com/embed/tHmbSSKiK8M?si=2jRLFfli_zGx2oGC" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="rounded-4 my-2" width="350" height="150"
+          src="https://www.youtube.com/embed/4nh3tJSfnSg?si=ZRvGv5HBvaO4TXpn" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="rounded-4 my-2" width="350" height="150"
+          src="https://www.youtube.com/embed/4G2fcZJR9oI?si=s0Lm7r75hfwFZVOx" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
   </main>
 
 
   <!-- Footer Is Here -->
   <footer class="footer">
     <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" target="_blank" href="https://web.facebook.com/azeem.shahid.3517">
+      <li class="social-icon__item"><a class="social-icon__link" target="_blank"
+          href="https://web.facebook.com/azeem.shahid.3517">
           <ion-icon name="logo-facebook"></ion-icon>
         </a></li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" target="_blank" href="https://www.youtube.com/channel/UC8xxP_IkivosZY5tDsap4cA">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-        </li>
+      <li class="social-icon__item">
+        <a class="social-icon__link" target="_blank" href="https://www.youtube.com/channel/UC8xxP_IkivosZY5tDsap4cA">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </li>
       <!-- <li class="social-icon__item"><a class="social-icon__link" href="">
           <ion-icon name="logo-twitter"></ion-icon>
         </a></li> -->
       <!-- <li class="social-icon__item"><a class="social-icon__link" href="#">
           <ion-icon name="logo-linkedin"></ion-icon>
         </a></li> -->
-      <li class="social-icon__item"><a class="social-icon__link" target="_blank" href="https://www.instagram.com/chacha_chaudhary565/">
+      <li class="social-icon__item"><a class="social-icon__link" target="_blank"
+          href="https://www.instagram.com/chacha_chaudhary565/">
           <ion-icon name="logo-instagram"></ion-icon>
         </a></li>
     </ul>
